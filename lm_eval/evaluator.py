@@ -298,6 +298,9 @@ def simple_evaluate(
             fewshot_as_multiturn=fewshot_as_multiturn,
         )
 
+    print("###### print model config ######")
+    print(lm)
+
     results = evaluate(
         lm=lm,
         task_dict=task_dict,

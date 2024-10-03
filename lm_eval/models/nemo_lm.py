@@ -119,6 +119,9 @@ def load_model(
     model_class._original_build_tokenizer = model_class._build_tokenizer
     model_class._build_tokenizer = _synced_build_tokenizer
 
+    print("#### model config #####")
+    print(override_config)
+
     model = model_class.restore_from(
         restore_path=model_to_load_path.as_posix(),
         trainer=trainer,
